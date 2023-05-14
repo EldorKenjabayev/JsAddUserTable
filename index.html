@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>User Management System</title>
+	<link rel="stylesheet" href="./main.css">
+</head>
+<body><br>
+	<button id="AddNew" class="btn_user">Add User</button>
+	<div class="content" id="content">
+		<button id="CloseUser" class="btn_user">Close</button>
+		<form id="user-form" class="form">
+			<div class="div1">
+				<div class="div2">
+					<label for="name">Name:</label>
+					<input type="text" id="name" required>
+				</div>
+				<div class="div2">
+					<label for="last-name">Last Name:</label>
+					<input type="text" id="last-name" required>
+				</div>
+			</div>
+			<div class="div1">
+				<div class="div2">
+					<label for="age">Age:</label>
+					<input type="number" id="age" required>
+				</div>
+				<div class="div2">
+					<label for="email">Email:</label>
+					<input type="email" id="email" required>
+				</div>
+			</div>
+			<input type="submit" value="Add User" id="Adds">
+		</form><br>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Last Name</th>
+				<th>Age</th>
+				<th>Email</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody id="user-table-body"></tbody>
+	</table>
+
+	<div id="edit-user-modal" class="modal">
+		<div class="modal-content">
+			<form id="edit-user-form" class="form2">
+				<div class="divEdit1">
+					<div class="divEdit2">
+						<input type="hidden" id="edit-user-index">
+				<label for="edit-name">Name:</label>
+				<input type="text" id="edit-name" required>
+					</div>
+					<div class="divEdit2">
+						<label for="edit-last-name">Last Name:</label>
+						<input type="text" id="edit-last-name" required>
+					</div>
+				</div>
+				<div class="divEdit1">
+					<div class="divEdit2">
+						<label for="edit-age">Age:</label>
+						<input type="number" id="edit-age" required>
+					</div>
+					<div class="divEdit2">
+						<label for="edit-email">Email:</label>
+						<input type="email" id="edit-email" required>
+					</div>
+				</div>
+				
+				<input type="submit" value="Save User" id="editSave" >
+			</form>
+		</div>
+	</div>
+
+	<script src="./main.js"></script>
+</body>
+</html>
